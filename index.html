@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FOSHI — pesquisa independente em compressão de transformers</title>
 <meta name="description" content="Pesquisa independente sobre compressão de modelos de linguagem. Cem modelos treinados, resultados medidos, retratações registradas, limitações declaradas.">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -14,6 +18,7 @@
     --paper:#222526; --card:#222526; --rule:#3E4345;
     --signal:#D1C098; --measure:64ch;
   }
+
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -202,6 +207,7 @@
     .scope-band{grid-template-columns:repeat(2,1fr);gap:24px 20px}
     .fails{grid-template-columns:1fr;gap:0}
   }
+
   @media (max-width:760px){
     body{font-size:16px}
     .hero{padding:52px 0 44px}
@@ -214,6 +220,7 @@
   }
 </style>
 </head>
+
 <body>
 
 <header class="bar">
@@ -235,6 +242,7 @@
     <span>SEÇÕES</span>
     <button class="menu-close" id="menuClose" aria-label="Fechar menu">&times;</button>
   </div>
+
   <nav>
     <a href="#medido"><b>01</b>O que foi medido</a>
     <a href="#isolamento"><b>02</b>Técnicas isoladas</a>
@@ -272,6 +280,7 @@
         <span class="k">da velocidade de geração, no mesmo hardware</span>
       </div>
     </div>
+
     <p class="readout-note">
       Medido em quatro escalas de modelo, com três sementes aleatórias em cada
       ponto e uma linha de base treinada na mesma receita.
@@ -300,8 +309,8 @@
           acrescentar informação nova.
         </p>
         <p class="measure">
-          A pesquisa mede quanta dessa repetição dá pra remover, componente por
-          componente, e o preço exato de cada remoção. Cada número vem de
+          A pesquisa mede quanta dessa repetição dá pra remover, componente,
+          e o preço exato de cada remoção. Cada número vem de
           modelos treinados do zero e comparados contra uma linha de base de
           mesmo tamanho, treinada na mesma máquina com a mesma receita.
         </p>
@@ -359,12 +368,12 @@
         </p>
         <svg viewBox="0 0 720 210" role="img" aria-label="Custo de qualidade por milhão de parâmetros removidos: componente A custa 3,0 e componente B custa 26,8">
           <line class="axl" x1="150" y1="18" x2="150" y2="170"/>
-          <line class="ax"  x1="150" y1="170" x2="700" y2="170"/>
-          <rect class="bar"     x="150" y="34"  width="60"  height="42" rx="1"/>
+          <line class="ax" x1="150" y1="170" x2="700" y2="170"/>
+          <rect class="bar" x="150" y="34" width="60" height="42" rx="1"/>
           <rect class="bar-alt" x="150" y="104" width="536" height="42" rx="1"/>
-          <text class="pl" x="140" y="60"  text-anchor="end">Componente A</text>
+          <text class="pl" x="140" y="60" text-anchor="end">Componente A</text>
           <text class="pl" x="140" y="130" text-anchor="end">Componente B</text>
-          <text class="tk" x="220" y="60"  >3,0</text>
+          <text class="tk" x="220" y="60">3,0</text>
           <text class="tk" x="676" y="130" text-anchor="end" fill="#222526">26,8</text>
           <text class="al" x="150" y="196">PONTOS DE QUALIDADE PERDIDOS POR MILHÃO DE PARÂMETROS REMOVIDOS</text>
         </svg>
@@ -382,16 +391,16 @@
           <line class="gl" x1="90" y1="232" x2="700" y2="232"/>
           <line class="gl" x1="90" y1="176" x2="700" y2="176"/>
           <line class="gl" x1="90" y1="120" x2="700" y2="120"/>
-          <line class="gl" x1="90" y1="64"  x2="700" y2="64"/>
+          <line class="gl" x1="90" y1="64" x2="700" y2="64"/>
           <line class="cut" x1="90" y1="148" x2="700" y2="148"/>
           <text class="cutl" x="700" y="142" text-anchor="end">critério: 5%</text>
           <line class="axl" x1="90" y1="20" x2="90" y2="248"/>
-          <line class="ax"  x1="90" y1="248" x2="700" y2="248"/>
+          <line class="ax" x1="90" y1="248" x2="700" y2="248"/>
           <text class="tk" x="80" y="252" text-anchor="end">0</text>
           <text class="tk" x="80" y="236" text-anchor="end">2</text>
           <text class="tk" x="80" y="180" text-anchor="end">4</text>
           <text class="tk" x="80" y="124" text-anchor="end">6</text>
-          <text class="tk" x="80" y="68"  text-anchor="end">8</text>
+          <text class="tk" x="80" y="68" text-anchor="end">8</text>
           <polyline class="ln" points="146,200 200,199 311,153 645,20"/>
           <circle class="dot" cx="146" cy="200" r="5"/>
           <circle class="dot" cx="200" cy="199" r="5"/>
@@ -418,22 +427,22 @@
         <svg viewBox="0 0 720 280" role="img" aria-label="Custo de qualidade por escala de modelo: cai de 3,34 para 2,15 e estaciona em 2,14, contra uma previsão de 0,96 que não se confirmou">
           <line class="gl" x1="100" y1="196" x2="660" y2="196"/>
           <line class="gl" x1="100" y1="140" x2="660" y2="140"/>
-          <line class="gl" x1="100" y1="84"  x2="660" y2="84"/>
+          <line class="gl" x1="100" y1="84" x2="660" y2="84"/>
           <line class="axl" x1="100" y1="30" x2="100" y2="228"/>
-          <line class="ax"  x1="100" y1="228" x2="660" y2="228"/>
+          <line class="ax" x1="100" y1="228" x2="660" y2="228"/>
           <text class="tk" x="90" y="232" text-anchor="end">0</text>
           <text class="tk" x="90" y="200" text-anchor="end">1</text>
           <text class="tk" x="90" y="144" text-anchor="end">2</text>
-          <text class="tk" x="90" y="88"  text-anchor="end">3</text>
+          <text class="tk" x="90" y="88" text-anchor="end">3</text>
           <polyline class="ln" points="170,42 380,108 620,109"/>
           <polyline class="ln-p" points="380,108 620,174"/>
-          <circle class="dot" cx="170" cy="42"  r="5"/>
+          <circle class="dot" cx="170" cy="42" r="5"/>
           <circle class="dot" cx="380" cy="108" r="5"/>
           <circle class="dot" cx="620" cy="109" r="5"/>
           <circle class="dot-o" cx="620" cy="174" r="5"/>
-          <text class="tk" x="170" y="30"  text-anchor="middle">3,34</text>
-          <text class="tk" x="380" y="98"  text-anchor="middle">2,15</text>
-          <text class="tk" x="620" y="99"  text-anchor="middle">2,14</text>
+          <text class="tk" x="170" y="30" text-anchor="middle">3,34</text>
+          <text class="tk" x="380" y="98" text-anchor="middle">2,15</text>
+          <text class="tk" x="620" y="99" text-anchor="middle">2,14</text>
           <text class="cutl" x="620" y="192" text-anchor="middle">0,96 previsto</text>
           <text class="pl" x="170" y="250" text-anchor="middle">pequeno</text>
           <text class="pl" x="380" y="250" text-anchor="middle">médio</text>
@@ -441,6 +450,7 @@
           <text class="al" x="100" y="272">ESCALA DO MODELO →</text>
           <text class="al" x="22" y="130" transform="rotate(-90 22 130)" text-anchor="middle">CUSTO %</text>
         </svg>
+
         <div class="legend">
           <span><i></i>medido, três sementes por ponto</span>
           <span class="d"><i></i>previsto antes do experimento — não se confirmou</span>
@@ -454,6 +464,7 @@
     <h2>O QUE ISSO DARIA EM ESCALA</h2>
     <div class="proj">
       <span class="proj-tag">PROJEÇÃO — ARITMÉTICA, NÃO MEDIÇÃO</span>
+
       <div class="proj-grid">
         <div>
           <span class="v num">~3 bi</span>
@@ -468,12 +479,14 @@
           <span class="k">equivalentes dentro de um orçamento de 1 GB</span>
         </div>
       </div>
+
       <p>
         Estes três números não vêm de nenhum modelo treinado. São a proporção
         medida nas escalas pequenas aplicada a tamanhos que esta pesquisa não
         alcançou — o maior modelo verificado até aqui tem menos de duzentos
         milhões de parâmetros.
       </p>
+
       <p>
         A proporção pode não se manter. Já aconteceu antes neste projeto: uma
         tendência aparentemente estável em duas escalas parou de valer na
@@ -526,6 +539,7 @@
 
   <section id="retratado">
     <h2>O QUE FOI RETRATADO</h2>
+
     <div class="entry struck">
       <h3><span>Compressão de 28×</span></h3>
       <p>
@@ -533,6 +547,7 @@
         teste com parâmetros pareados derrubou a alegação inteira.
       </p>
     </div>
+
     <div class="entry struck">
       <h3><span>Sessenta e dois experimentos comprovando compressão</span></h3>
       <p>
@@ -541,6 +556,7 @@
         nove escalas verificadas estavam infladas entre 0,3% e 41%.
       </p>
     </div>
+
     <div class="entry struck">
       <h3><span>O custo do compartilhamento some conforme o modelo cresce</span></h3>
       <p>
@@ -549,6 +565,7 @@
         do experimento, mostrou a saturação — e a previsão falhou.
       </p>
     </div>
+
     <div class="entry struck">
       <h3><span>Uma lei geral prevendo a compressão a partir da arquitetura</span></h3>
       <p>
@@ -563,6 +580,7 @@
 
   <section id="nao-funcionou">
     <h2>O QUE NÃO FUNCIONOU</h2>
+
     <div class="fails">
       <div class="fail">
         <h3>Remover os pesos menores</h3>
@@ -572,6 +590,7 @@
           confirmada, então a técnica está fora do conjunto.
         </p>
       </div>
+
       <div class="fail">
         <h3>Fatorar as matrizes em posto menor</h3>
         <p>
@@ -579,6 +598,7 @@
           quatro escalas e não melhorou o resultado em nenhuma.
         </p>
       </div>
+
       <div class="fail">
         <h3>Fundir pesos por média</h3>
         <p>
@@ -586,6 +606,7 @@
           falhou completamente em modelos já treinados.
         </p>
       </div>
+
       <div class="fail">
         <h3>Escalar dois eixos ao mesmo tempo</h3>
         <p>
@@ -594,6 +615,7 @@
           sessenta e dois experimentos.
         </p>
       </div>
+
       <div class="fail">
         <h3>Medir capacidade nesta escala</h3>
         <p>
@@ -602,6 +624,7 @@
           demais para a métrica funcionar.
         </p>
       </div>
+
       <div class="fail">
         <h3>Empurrar o compartilhamento ao extremo</h3>
         <p>
@@ -615,6 +638,7 @@
 
   <section id="historia">
     <h2>COMO O PROJETO CHEGOU AQUI</h2>
+
     <ul class="arc">
       <li>
         <span class="stage">Início</span>
@@ -627,6 +651,7 @@
           </p>
         </div>
       </li>
+
       <li>
         <span class="stage">Depois</span>
         <div>
@@ -638,6 +663,7 @@
           </p>
         </div>
       </li>
+
       <li>
         <span class="stage">Virada</span>
         <div>
@@ -649,6 +675,7 @@
           </p>
         </div>
       </li>
+
       <li>
         <span class="stage">Auditoria</span>
         <div>
@@ -661,6 +688,7 @@
           </p>
         </div>
       </li>
+
       <li>
         <span class="stage">Agora</span>
         <div>
@@ -677,6 +705,7 @@
 
   <section id="limites">
     <h2>LIMITES DO QUE ISSO MOSTRA</h2>
+
     <div class="scope">
       <ul>
         <li>
@@ -709,6 +738,7 @@
 
   <section id="situacao">
     <h2>SITUAÇÃO</h2>
+
     <div class="measure">
       <p>
         A pesquisa continua. As próximas etapas são validar o resultado em uma
@@ -716,6 +746,7 @@
         de tarefa — que exige um modelo grande o bastante para sair do acaso — e
         rodar o modelo comprimido em um telefone comum.
       </p>
+
       <p>
         O método completo, as configurações e os dados brutos não estão
         publicados. Contato aberto para colaboração, revisão independente ou
@@ -777,6 +808,7 @@
   });
 })();
 </script>
+
 </body>
 </html>
-<link rel="icon" type="image/png" href="foshi_going_crazy">
+```
