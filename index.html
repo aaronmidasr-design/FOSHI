@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FOSHI — pesquisa independente em compressão de transformers</title>
 <meta name="description" content="Pesquisa independente sobre compressão de modelos de linguagem. Cem modelos treinados, resultados medidos, retratações registradas, limitações declaradas.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -93,13 +95,14 @@
   .lede{font-size:20px;line-height:1.65;color:#FFFFFF;max-width:58ch;margin:0;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.55);padding:0}
 
   .readout{margin:52px 0 0;display:grid;grid-template-columns:repeat(3,1fr);
-    border-top:1.5px solid var(--ink)}
-  .cell{padding:26px 22px 24px 0;border-right:1px solid var(--rule)}
+    border-top:0}
+  .cell{padding:26px 22px 24px 0;border-right:0}
   .cell:last-child{border-right:0}
   .cell .v{font-family:"IBM Plex Mono";font-size:clamp(38px,6vw,58px);font-weight:500;
-    color:var(--signal);line-height:1;letter-spacing:-.02em;display:block}
-  .cell .k{font-family:"IBM Plex Sans";font-size:14.5px;color:var(--ink-soft);
-    margin-top:12px;display:block;max-width:20ch;line-height:1.45}
+    color:#B0761A;line-height:1;letter-spacing:-.02em;display:block}
+  .cell .k{font-family:"IBM Plex Sans";font-size:15.5px;color:#FFFFFF;
+    margin-top:12px;display:block;max-width:20ch;line-height:1.5;font-weight:500;
+    text-shadow:0 2px 5px rgba(0,0,0,.45)}
   .readout-note{font-size:14.5px;color:var(--muted);margin:18px 0 0;
     font-family:"IBM Plex Sans";max-width:70ch}
 
@@ -188,7 +191,7 @@
   .scope li{margin-bottom:10px;font-size:16px;color:var(--ink-soft);max-width:60ch}
   .scope li:last-child{margin-bottom:0}
 
-  footer{border-top:1.5px solid var(--ink);padding:36px 0 60px;font-size:15px}
+  footer{border-top:0;padding:36px 0 60px;font-size:15px}
   footer p{color:var(--muted);max-width:64ch;font-size:15px}
 
   .rise{opacity:0;transform:translateY(10px);animation:rise .6s cubic-bezier(.2,.7,.3,1) forwards}
@@ -205,7 +208,7 @@
   @media (max-width:760px){
     body{font-size:16px}
     .hero{padding:52px 0 44px}
-    .readout{grid-template-columns:1fr;border-top:1.5px solid var(--ink)}
+    .readout{grid-template-columns:1fr;border-top:0}
     .cell{border-right:0;border-bottom:1px solid var(--rule);padding:20px 0}
     .cell:last-child{border-bottom:0}
     .cols{grid-template-columns:1fr;gap:34px}
@@ -222,12 +225,17 @@
     .hero::after{background:linear-gradient(180deg,rgba(105,109,111,.96) 0%,rgba(145,149,151,.96) 28%,rgba(185,188,190,.97) 52%,rgba(82,86,88,.96) 76%,rgba(34,37,38,1) 100%)}
     .hero h1{color:#fff;text-shadow:0 2px 5px rgba(0,0,0,.45);font-size:clamp(32px,9vw,44px);line-height:1.08}
     .hero .lede{color:#F5F2ED;text-shadow:0 1px 3px rgba(0,0,0,.40);font-size:17px;line-height:1.65}
-    .cell .v{color:#D8BD82;text-shadow:0 1px 2px rgba(0,0,0,.25)}
-    .cell .k{color:#fff;font-size:15.5px;font-weight:600;line-height:1.5;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+    .cell .v{color:#B0761A;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+    .cell .k{color:#FFFFFF;font-size:15.5px;font-weight:500;line-height:1.5;text-shadow:0 2px 5px rgba(0,0,0,.45)}
     .readout-note{color:#E9E6E1;font-size:14px;line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.35)}
     .wrap{padding-left:22px;padding-right:22px}
   }
-  /* ---------- lede mais visivel no celular ---------- */
+  /* ---------- letras mais legiveis em qualquer tela ---------- */
+  .hero .lede{
+    color:#FFFFFF;
+    font-weight:500;
+    text-shadow:0 2px 5px rgba(0,0,0,.45)
+  }
   @media (max-width:760px){
     .hero .lede{
       font-size:18px;
@@ -235,12 +243,61 @@
       color:#FFFFFF;
       font-weight:600;
       max-width:100%;
-      padding:12px 14px;
-      background:rgba(20,22,23,.42);
-      text-shadow:0 2px 5px rgba(0,0,0,.65);
-      border-left:3px solid #D1C098;
-      border-radius:2px
+      text-shadow:0 2px 5px rgba(0,0,0,.60)
     }
+    .cell .k{
+      color:#FFFFFF;
+      font-size:15.5px;
+      font-weight:600;
+      line-height:1.5;
+      text-shadow:0 2px 5px rgba(0,0,0,.60)
+    }
+  }
+
+
+  /* ---------- versão mobile aprimorada ---------- */
+  @media (max-width:760px){
+    html{scroll-behavior:smooth}
+    body{font-size:16px;overflow-x:hidden}
+    .wrap{width:min(100% - 32px,var(--measure));padding-left:0;padding-right:0}
+    header{padding:14px 0}
+    .nav{gap:14px;align-items:center}
+    .brand{font-size:13px}
+    .menu{display:none}
+
+    .hero{padding:42px 0 38px;overflow:hidden}
+    .hero .wrap{width:min(100% - 32px,var(--measure))}
+    .hero h1{font-size:clamp(30px,9vw,42px);line-height:1.08;letter-spacing:-.02em;margin-bottom:16px}
+    .hero .lede{font-size:17px;line-height:1.58;max-width:100%;color:#fff;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.5)}
+
+    .readout{margin-top:38px;display:grid;grid-template-columns:1fr;border-top:0}
+    .cell{padding:20px 0 22px;border-right:0;border-bottom:1px solid var(--rule)}
+    .cell:last-child{border-bottom:0}
+    .cell .v{font-size:clamp(42px,13vw,56px);line-height:.98}
+    .cell .k{font-size:15.5px;line-height:1.5;max-width:32ch;color:#fff;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.45)}
+    .readout-note{font-size:14px;line-height:1.6;margin-top:16px}
+
+    section{padding:42px 0}
+    section h2{font-size:clamp(22px,6vw,30px);line-height:1.15}
+    .cols,.proj-grid{grid-template-columns:1fr;gap:26px}
+    .cols>*{min-width:0}
+    p{line-height:1.65}
+    .arc li{grid-template-columns:1fr;gap:6px;padding:14px 0}
+    .arc .yr{font-size:13px}
+    .project-card{padding:20px}
+    .project-card h3{font-size:19px}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table{min-width:620px}
+    pre,code{max-width:100%;overflow-x:auto}
+    footer{padding:30px 0 36px}
+  }
+
+  @media (max-width:380px){
+    .wrap,.hero .wrap{width:calc(100% - 28px)}
+    .hero{padding-top:36px}
+    .hero h1{font-size:30px}
+    .hero .lede{font-size:16px}
+    .cell .v{font-size:42px}
   }
 
 </style>
@@ -253,32 +310,10 @@
       <span class="mark">FOSHI</span>
       <span class="meta">Pesquisa independente · Brasil · 2026</span>
     </div>
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu de seções">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
-<div class="veil" id="veil" hidden></div>
 
-<aside class="menu" id="menu" aria-label="Seções" aria-hidden="true">
-  <div class="menu-head">
-    <span>SEÇÕES</span>
-    <button class="menu-close" id="menuClose" aria-label="Fechar menu">&times;</button>
-  </div>
-  <nav>
-    <a href="#medido"><b>01</b>O que foi medido</a>
-    <a href="#isolamento"><b>02</b>Técnicas isoladas</a>
-    <a href="#dados"><b>03</b>Os dados</a>
-    <a href="#escala"><b>04</b>O que daria em escala</a>
-    <a href="#metodo"><b>05</b>Como foi testado</a>
-    <a href="#retratado"><b>06</b>O que foi retratado</a>
-    <a href="#nao-funcionou"><b>07</b>O que não funcionou</a>
-    <a href="#historia"><b>08</b>Como chegou aqui</a>
-    <a href="#limites"><b>09</b>Limites</a>
-    <a href="#situacao"><b>10</b>Situação</a>
-  </nav>
-</aside>
 
 <div class="hero">
   <div class="wrap">
@@ -768,45 +803,6 @@
   </div>
 </footer>
 
-<script>
-(function(){
-  var burger=document.getElementById('burger'),
-      menu=document.getElementById('menu'),
-      veil=document.getElementById('veil'),
-      close=document.getElementById('menuClose'),
-      open=false;
 
-  function set(v){
-    open=v;
-    menu.classList.toggle('on',v);
-    veil.classList.toggle('on',v);
-    veil.hidden=!v;
-    burger.setAttribute('aria-expanded',v?'true':'false');
-    burger.setAttribute('aria-label',v?'Fechar menu de seções':'Abrir menu de seções');
-    menu.setAttribute('aria-hidden',v?'false':'true');
-    document.body.style.overflow=v?'hidden':'';
-    if(v){ (menu.querySelector('a')||close).focus(); } else { burger.focus(); }
-  }
-
-  burger.addEventListener('click',function(){set(!open);});
-  close.addEventListener('click',function(){set(false);});
-  veil.addEventListener('click',function(){set(false);});
-
-  document.addEventListener('keydown',function(e){
-    if(!open) return;
-    if(e.key==='Escape'){set(false);return;}
-    if(e.key!=='Tab') return;
-    var f=menu.querySelectorAll('a,button');
-    if(!f.length) return;
-    var first=f[0],last=f[f.length-1];
-    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
-    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
-  });
-
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){setTimeout(function(){set(false);},60);});
-  });
-})();
-</script>
 </body>
 </html>
