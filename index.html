@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#151A35; --ink-soft:#4A5169; --muted:#7C8497;
-    --paper:#EAEDF1; --card:#FFFFFF; --rule:#C6CCD7;
-    --signal:#B0761A; --measure:64ch;
+    --ink:#D1CDC7; --ink-soft:#B6B3AE; --muted:#8F9190;
+    --paper:#222526; --card:#222526; --rule:#3E4345;
+    --signal:#D1C098; --measure:64ch;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -20,7 +20,7 @@
   section{scroll-margin-top:78px}
 
   /* ---------- barra fixa + menu ---------- */
-  .bar{position:sticky;top:0;z-index:60;background:rgba(234,237,241,.92);
+  .bar{position:sticky;top:0;z-index:60;background:rgba(34,37,38,.92);
     backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
   .bar .wrap{display:flex;align-items:center;justify-content:space-between;
     gap:14px;padding-top:16px;padding-bottom:16px}
@@ -41,7 +41,7 @@
   .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
   @media (prefers-reduced-motion:reduce){.burger span{transition:none}}
 
-  .veil{position:fixed;inset:0;z-index:55;background:rgba(21,26,53,.28);
+  .veil{position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.42);
     opacity:0;visibility:hidden;transition:opacity .25s}
   .veil.on{opacity:1;visibility:visible}
 
@@ -62,7 +62,7 @@
   .menu a{display:flex;gap:14px;align-items:baseline;padding:15px 24px;
     text-decoration:none;border-bottom:1px solid var(--rule);
     font-family:"IBM Plex Sans";font-size:15.5px;color:var(--ink)}
-  .menu a:hover{background:var(--paper)}
+  .menu a:hover{background:#2A2E2F}
   .menu a:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
   .menu a b{font-family:"IBM Plex Mono";font-size:12px;font-weight:400;
     color:var(--signal);flex:0 0 22px}
@@ -101,7 +101,7 @@
   .cell .k{font-family:"IBM Plex Sans";font-size:14.5px;color:var(--ink-soft);
     margin-top:12px;display:block;max-width:20ch;line-height:1.45}
   .readout-note{font-size:14.5px;color:var(--muted);margin:18px 0 0;
-    font-family:"IBM Plex Sans";max-width:70ch}
+    font-family:"IBM Plex Sans";max-width:70ch;line-height:1.55}
 
   .scope-band{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
     padding:30px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
@@ -365,7 +365,7 @@
           <text class="pl" x="140" y="60"  text-anchor="end">Componente A</text>
           <text class="pl" x="140" y="130" text-anchor="end">Componente B</text>
           <text class="tk" x="220" y="60"  >3,0</text>
-          <text class="tk" x="676" y="130" text-anchor="end" fill="#EAEDF1">26,8</text>
+          <text class="tk" x="676" y="130" text-anchor="end" fill="#222526">26,8</text>
           <text class="al" x="150" y="196">PONTOS DE QUALIDADE PERDIDOS POR MILHÃO DE PARÂMETROS REMOVIDOS</text>
         </svg>
       </div>
