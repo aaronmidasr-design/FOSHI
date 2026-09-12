@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://foshi.vercel.app/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://foshi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foshi.vercel.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foshi.vercel.app/en/"/>
+  </url>
+  <url>
+    <loc>https://foshi.vercel.app/en/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://foshi.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foshi.vercel.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foshi.vercel.app/en/"/>
   </url>
 </urlset>

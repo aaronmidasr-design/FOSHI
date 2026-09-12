@@ -6,11 +6,16 @@
 <title>FOSHI — pesquisa independente em compressão de transformers</title>
 <meta name="description" content="Pesquisa independente sobre compressão de modelos de linguagem. Cem modelos treinados, resultados medidos, retratações registradas, limitações declaradas.">
 <link rel="canonical" href="https://foshi.vercel.app/">
+<link rel="alternate" hreflang="pt-BR" href="https://foshi.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://foshi.vercel.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://foshi.vercel.app/en/">
+<script src="/lang.js"></script>
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="FOSHI">
 <meta property="og:title" content="FOSHI — pesquisa independente em compressão de transformers">
 <meta property="og:description" content="Pesquisa independente sobre compressão de modelos de linguagem. Cem modelos treinados, resultados medidos, retratações registradas, limitações declaradas.">
@@ -313,6 +318,14 @@
     .cell .v{font-size:42px}
   }
 
+  /* ---------- seletor de idioma ---------- */
+  .lang{display:flex;gap:4px;flex:0 0 auto;font-family:"IBM Plex Sans";
+    font-size:13px;font-weight:600;letter-spacing:.1em}
+  .lang a{padding:6px 9px;border:1px solid transparent;border-radius:2px;
+    text-decoration:none;color:var(--muted)}
+  .lang a:hover{color:var(--ink)}
+  .lang a[aria-current]{color:var(--ink);border-color:var(--rule)}
+
 </style>
 </head>
 <body>
@@ -323,6 +336,10 @@
       <span class="mark">FOSHI</span>
       <span class="meta">Pesquisa independente · Brasil · 2026</span>
     </div>
+    <nav class="lang" aria-label="Idioma">
+      <a href="/" hreflang="pt-BR" lang="pt-BR" data-lang="pt" aria-current="page">PT</a>
+      <a href="/en/" hreflang="en" lang="en" data-lang="en">EN</a>
+    </nav>
   </div>
 </header>
 
