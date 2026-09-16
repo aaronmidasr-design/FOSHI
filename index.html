@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FOSHI — pesquisa independente em compressão de transformers</title>
-<meta name="description" content="Pesquisa independente sobre compressão de modelos de linguagem. Cem modelos treinados, resultados medidos, retratações registradas, limitações declaradas.">
-<link rel="canonical" href="https://foshi.vercel.app/">
+<title>FOSHI — independent research on transformer compression</title>
+<meta name="description" content="Independent research on language model compression. A hundred models trained, measured results, recorded retractions, stated limitations.">
+<link rel="canonical" href="https://foshi.vercel.app/en/">
 <link rel="alternate" hreflang="pt-BR" href="https://foshi.vercel.app/">
 <link rel="alternate" hreflang="en" href="https://foshi.vercel.app/en/">
 <link rel="alternate" hreflang="x-default" href="https://foshi.vercel.app/en/">
@@ -14,16 +14,16 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
 <meta property="og:site_name" content="FOSHI">
-<meta property="og:title" content="FOSHI — pesquisa independente em compressão de transformers">
-<meta property="og:description" content="Pesquisa independente sobre compressão de modelos de linguagem. Cem modelos treinados, resultados medidos, retratações registradas, limitações declaradas.">
-<meta property="og:url" content="https://foshi.vercel.app/">
+<meta property="og:title" content="FOSHI — independent research on transformer compression">
+<meta property="og:description" content="Independent research on language model compression. A hundred models trained, measured results, recorded retractions, stated limitations.">
+<meta property="og:url" content="https://foshi.vercel.app/en/">
 <meta property="og:image" content="https://foshi.vercel.app/favicon.png">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"FOSHI","alternateName":"FOSHI — pesquisa independente em compressão de transformers","url":"https://foshi.vercel.app/","inLanguage":"pt-BR"}
+{"@context":"https://schema.org","@type":"WebSite","name":"FOSHI","alternateName":"FOSHI — independent research on transformer compression","url":"https://foshi.vercel.app/en/","inLanguage":"en"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,6 @@
   .brand{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
   .mark{font-family:"IBM Plex Sans";font-weight:600;letter-spacing:.14em;font-size:15px}
   .bar .meta{font-size:13.5px;color:var(--muted);font-family:"IBM Plex Sans"}
-  @media (max-width:620px){.bar .meta{display:none}}
 
   .burger{appearance:none;background:transparent;border:1px solid var(--rule);
     border-radius:2px;width:44px;height:38px;cursor:pointer;flex:0 0 auto;
@@ -202,7 +201,6 @@
   .proj-grid .k{font-family:"IBM Plex Sans";font-size:13.5px;color:var(--muted);
     margin-top:9px;display:block;line-height:1.45;max-width:22ch}
   .proj p{font-size:15.5px;color:var(--ink-soft);max-width:60ch}
-  @media (max-width:760px){.proj-grid{grid-template-columns:1fr;gap:20px}}
 
   .scope{background:var(--card);border:1px solid var(--rule);padding:30px 32px}
   .scope ul{margin:0;padding-left:20px}
@@ -219,106 +217,32 @@
   @keyframes rise{to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}}
 
-  @media (max-width:860px){
-    .scope-band{grid-template-columns:repeat(2,1fr);gap:24px 20px}
-    .fails{grid-template-columns:1fr;gap:0}
-  }
-  @media (max-width:760px){
-    body{font-size:16px}
-    .hero{padding:52px 0 44px}
-    .readout{grid-template-columns:1fr;border-top:0}
-    .cell{border-right:0;border-bottom:1px solid var(--rule);padding:20px 0}
-    .cell:last-child{border-bottom:0}
-    .cols{grid-template-columns:1fr;gap:34px}
-    .arc li{grid-template-columns:1fr;gap:6px}
-    section{padding:46px 0}
-  }
-
-  /* ---------- contraste mobile ---------- */
-  @media (max-width:760px){
-    .hero{padding:44px 0 42px;background-image:
-      linear-gradient(rgba(80,84,86,.38) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(80,84,86,.38) 1px,transparent 1px);
-      background-size:100% 30px,30px 100%;}
-    .hero::after{background:linear-gradient(180deg,rgba(105,109,111,.96) 0%,rgba(145,149,151,.96) 28%,rgba(185,188,190,.97) 52%,rgba(82,86,88,.96) 76%,rgba(34,37,38,1) 100%)}
-    .hero h1{color:#fff;text-shadow:0 2px 5px rgba(0,0,0,.45);font-size:clamp(32px,9vw,44px);line-height:1.08}
-    .hero .lede{color:#F5F2ED;text-shadow:0 1px 3px rgba(0,0,0,.40);font-size:17px;line-height:1.65}
-    .cell .v{color:#B0761A;text-shadow:0 1px 2px rgba(0,0,0,.25)}
-    .cell .k{color:#FFFFFF;font-size:15.5px;font-weight:500;line-height:1.5;text-shadow:0 2px 5px rgba(0,0,0,.45)}
-    .readout-note{color:#E9E6E1;font-size:14px;line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.35)}
-    .wrap{padding-left:22px;padding-right:22px}
-  }
   /* ---------- letras mais legiveis em qualquer tela ---------- */
   .hero .lede{
     color:#FFFFFF;
     font-weight:500;
     text-shadow:0 2px 5px rgba(0,0,0,.45)
   }
+
+  /* ---------- celular: mesmo visual do PC ----------
+     Cores, fundo, tamanhos e cabeçalho são os mesmos do computador.
+     Aqui só se reorganiza o que fisicamente não cabe na largura do telefone. */
   @media (max-width:760px){
-    .hero .lede{
-      font-size:18px;
-      line-height:1.65;
-      color:#FFFFFF;
-      font-weight:600;
-      max-width:100%;
-      text-shadow:0 2px 5px rgba(0,0,0,.60)
-    }
-    .cell .k{
-      color:#FFFFFF;
-      font-size:15.5px;
-      font-weight:600;
-      line-height:1.5;
-      text-shadow:0 2px 5px rgba(0,0,0,.60)
-    }
+    .wrap{padding:0 20px}
+    .brand{gap:2px 12px}
+    .readout{gap:0 12px}
+    .cell{padding:26px 0 24px;min-width:0}
+    .cell .k{max-width:none}
+    .scope-band{grid-template-columns:repeat(3,1fr);gap:24px 16px}
+    .cols{grid-template-columns:1fr;gap:18px}
+    .fails{grid-template-columns:1fr;gap:0}
+    .arc li{grid-template-columns:72px 1fr;gap:14px}
+    .proj{padding:24px 20px}
+    .proj-grid{grid-template-columns:1fr;gap:20px}
+    .scope{padding:24px 20px}
   }
 
-
-  /* ---------- versão mobile aprimorada ---------- */
-  @media (max-width:760px){
-    html{scroll-behavior:smooth}
-    body{font-size:16px;overflow-x:hidden}
-    .wrap{width:min(100% - 32px,var(--measure));padding-left:0;padding-right:0}
-    header{padding:14px 0}
-    .nav{gap:14px;align-items:center}
-    .brand{font-size:13px}
-    .menu{display:none}
-
-    .hero{padding:42px 0 38px;overflow:hidden}
-    .hero .wrap{width:min(100% - 32px,var(--measure))}
-    .hero h1{font-size:clamp(30px,9vw,42px);line-height:1.08;letter-spacing:-.02em;margin-bottom:16px}
-    .hero .lede{font-size:17px;line-height:1.58;max-width:100%;color:#fff;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.5)}
-
-    .readout{margin-top:38px;display:grid;grid-template-columns:1fr;border-top:0}
-    .cell{padding:20px 0 22px;border-right:0;border-bottom:1px solid var(--rule)}
-    .cell:last-child{border-bottom:0}
-    .cell .v{font-size:clamp(42px,13vw,56px);line-height:.98}
-    .cell .k{font-size:15.5px;line-height:1.5;max-width:32ch;color:#fff;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.45)}
-    .readout-note{font-size:14px;line-height:1.6;margin-top:16px}
-
-    section{padding:42px 0}
-    section h2{font-size:clamp(22px,6vw,30px);line-height:1.15}
-    .cols,.proj-grid{grid-template-columns:1fr;gap:26px}
-    .cols>*{min-width:0}
-    p{line-height:1.65}
-    .arc li{grid-template-columns:1fr;gap:6px;padding:14px 0}
-    .arc .yr{font-size:13px}
-    .project-card{padding:20px}
-    .project-card h3{font-size:19px}
-    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-    table{min-width:620px}
-    pre,code{max-width:100%;overflow-x:auto}
-    footer{padding:30px 0 36px}
-  }
-
-  @media (max-width:380px){
-    .wrap,.hero .wrap{width:calc(100% - 28px)}
-    .hero{padding-top:36px}
-    .hero h1{font-size:30px}
-    .hero .lede{font-size:16px}
-    .cell .v{font-size:42px}
-  }
-
-  /* ---------- seletor de idioma ---------- */
+  /* ---------- language switcher ---------- */
   .lang{display:flex;gap:4px;flex:0 0 auto;font-family:"IBM Plex Sans";
     font-size:13px;font-weight:600;letter-spacing:.1em}
   .lang a{padding:6px 9px;border:1px solid transparent;border-radius:2px;
@@ -334,11 +258,11 @@
   <div class="wrap">
     <div class="brand">
       <span class="mark">FOSHI</span>
-      <span class="meta">Pesquisa independente · Brasil · 2026</span>
+      <span class="meta">Independent research · Brazil · 2026</span>
     </div>
-    <nav class="lang" aria-label="Idioma">
-      <a href="/" hreflang="pt-BR" lang="pt-BR" data-lang="pt" aria-current="page">PT</a>
-      <a href="/en/" hreflang="en" lang="en" data-lang="en">EN</a>
+    <nav class="lang" aria-label="Language">
+      <a href="/" hreflang="pt-BR" lang="pt-BR" data-lang="pt">PT</a>
+      <a href="/en/" hreflang="en" lang="en" data-lang="en" aria-current="page">EN</a>
     </nav>
   </div>
 </header>
@@ -347,30 +271,30 @@
 
 <div class="hero">
   <div class="wrap">
-    <h1>Modelos de linguagem carregam mais parâmetros do que precisam.</h1>
+    <h1>Language models carry more parameters than they need.</h1>
     <p class="lede">
-      Este é um projeto independente que mede quanto dá pra tirar antes da
-      qualidade cair — e quanto custa cada corte. Sem laboratório, sem
-      financiamento, numa placa de vídeo doméstica.
+      This is an independent project that measures how much can be removed
+      before quality drops — and what each cut costs. No lab, no funding,
+      on a single consumer graphics card.
     </p>
 
     <div class="readout">
       <div class="cell rise">
         <span class="v num">38%</span>
-        <span class="k">dos parâmetros de um transformer equivalente</span>
+        <span class="k">of the parameters of an equivalent transformer</span>
       </div>
       <div class="cell rise">
         <span class="v num">96%</span>
-        <span class="k">da qualidade de linguagem desse mesmo modelo</span>
+        <span class="k">of that same model's language quality</span>
       </div>
       <div class="cell rise">
         <span class="v num">95%</span>
-        <span class="k">da velocidade de geração, no mesmo hardware</span>
+        <span class="k">of its generation speed, on the same hardware</span>
       </div>
     </div>
     <p class="readout-note">
-      Medido em quatro escalas de modelo, com três sementes aleatórias em cada
-      ponto e uma linha de base treinada na mesma receita.
+      Measured at four model scales, with three random seeds at each point
+      and a baseline trained on the same recipe.
     </p>
   </div>
 </div>
@@ -378,109 +302,110 @@
 <div class="wrap">
 
   <div class="scope-band">
-    <div class="sb"><span class="n">100+</span><span class="l">modelos treinados do zero</span></div>
-    <div class="sb"><span class="n">62</span><span class="l">execuções controladas</span></div>
-    <div class="sb"><span class="n">41</span><span class="l">scripts de experimento</span></div>
-    <div class="sb"><span class="n">152M</span><span class="l">tokens de treino, dois corpora</span></div>
-    <div class="sb"><span class="n">1</span><span class="l">GPU de consumo</span></div>
+    <div class="sb"><span class="n">100+</span><span class="l">models trained from scratch</span></div>
+    <div class="sb"><span class="n">62</span><span class="l">controlled runs</span></div>
+    <div class="sb"><span class="n">41</span><span class="l">experiment scripts</span></div>
+    <div class="sb"><span class="n">152M</span><span class="l">training tokens, two corpora</span></div>
+    <div class="sb"><span class="n">1</span><span class="l">consumer GPU</span></div>
   </div>
 
-  <section id="medido" style="border-top:0">
-    <h2>O QUE FOI MEDIDO</h2>
+  <section id="measured" style="border-top:0">
+    <h2>WHAT WAS MEASURED</h2>
     <div class="cols">
       <div>
         <p class="measure">
-          Um transformer guarda blocos de processamento repetidos, camada após
-          camada. Boa parte do que cada bloco aprende é estruturalmente parecida
-          com o que o bloco vizinho aprende — e essa repetição ocupa espaço sem
-          acrescentar informação nova.
+          A transformer stores repeated processing blocks, layer after layer.
+          Much of what each block learns is structurally similar to what the
+          neighboring block learns — and that repetition takes up space
+          without adding new information.
         </p>
         <p class="measure">
-          A pesquisa mede quanta dessa repetição dá pra remover, componente por
-          componente, e o preço exato de cada remoção. Cada número vem de
-          modelos treinados do zero e comparados contra uma linha de base de
-          mesmo tamanho, treinada na mesma máquina com a mesma receita.
+          This research measures how much of that repetition can be removed,
+          component by component, and the exact price of each removal. Every
+          number comes from models trained from scratch and compared against a
+          same-size baseline, trained on the same machine with the same recipe.
         </p>
       </div>
       <div>
         <p class="measure">
-          A descoberta central é que os componentes de um transformer não são
-          igualmente redundantes. Alguns toleram compartilhamento agressivo;
-          outros perdem qualidade rápido. Tratar os dois do mesmo jeito é o que
-          fazia as tentativas anteriores falharem.
+          The central finding is that the components of a transformer are not
+          equally redundant. Some tolerate aggressive sharing; others lose
+          quality fast. Treating both the same way is what made earlier
+          attempts fail.
         </p>
         <p class="measure">
-          O custo de cada corte foi quantificado por parâmetro removido. Isso
-          transforma a compressão numa escolha — onde economizar — em vez de um
-          ajuste cego aplicado ao modelo inteiro.
+          The cost of each cut was quantified per parameter removed. That turns
+          compression into a choice — where to save — instead of a blind
+          adjustment applied to the whole model.
         </p>
       </div>
     </div>
   </section>
 
-  <section id="isolamento">
-    <h2>AS TÉCNICAS FORAM ISOLADAS ANTES DE COMBINADAS</h2>
+  <section id="isolation">
+    <h2>TECHNIQUES WERE ISOLATED BEFORE BEING COMBINED</h2>
     <div class="cols">
       <div>
         <p class="measure">
-          Antes de empilhar qualquer coisa, cada técnica de compressão foi
-          treinada sozinha e medida contra a mesma linha de base. Isso revelou
-          que a combinação não se comporta como a soma das partes: uma técnica
-          que funciona isolada pode desaparecer quando combinada, e o único jeito
-          de saber é medir as duas situações.
+          Before stacking anything, each compression technique was trained on
+          its own and measured against the same baseline. This revealed that
+          the combination does not behave like the sum of its parts: a
+          technique that works in isolation can vanish when combined, and the
+          only way to know is to measure both situations.
         </p>
       </div>
       <div>
         <p class="measure">
-          O erro mais comum em compressão é multiplicar os fatores de cada
-          técnica e anunciar o produto. Este projeto cometeu esse erro, chegou
-          internamente a um número inflado em duas ordens de grandeza, e o
-          corrigiu quando as técnicas foram medidas juntas de verdade.
+          The most common mistake in compression is to multiply the factors of
+          each technique and announce the product. This project made that
+          mistake, internally reached a number inflated by two orders of
+          magnitude, and corrected it once the techniques were actually
+          measured together.
         </p>
       </div>
     </div>
   </section>
 
-  <section id="dados">
-    <h2>OS DADOS</h2>
+  <section id="data">
+    <h2>THE DATA</h2>
     <div class="figs">
 
       <div class="fig">
-        <h3>Nem todo parâmetro custa o mesmo pra remover</h3>
+        <h3>Not every parameter costs the same to remove</h3>
         <p class="cap">
-          Os dois componentes principais de um transformer foram comprimidos
-          separadamente e o custo foi normalizado pela quantidade de parâmetros
-          que cada corte remove. A diferença entre eles é de quase nove vezes —
-          e é isso que torna a compressão uma escolha em vez de um ajuste cego.
+          The two main components of a transformer were compressed separately
+          and the cost was normalized by the number of parameters each cut
+          removes. The difference between them is almost ninefold — and that is
+          what makes compression a choice instead of a blind adjustment.
         </p>
-        <svg viewBox="0 0 720 210" role="img" aria-label="Custo de qualidade por milhão de parâmetros removidos: componente A custa 3,0 e componente B custa 26,8">
+        <svg viewBox="0 0 720 210" role="img" aria-label="Quality cost per million parameters removed: component A costs 3.0 and component B costs 26.8">
           <line class="axl" x1="150" y1="18" x2="150" y2="170"/>
           <line class="ax"  x1="150" y1="170" x2="700" y2="170"/>
           <rect class="bar"     x="150" y="34"  width="60"  height="42" rx="1"/>
           <rect class="bar-alt" x="150" y="104" width="536" height="42" rx="1"/>
-          <text class="pl" x="140" y="60"  text-anchor="end">Componente A</text>
-          <text class="pl" x="140" y="130" text-anchor="end">Componente B</text>
-          <text class="tk" x="220" y="60"  >3,0</text>
-          <text class="tk" x="676" y="130" text-anchor="end" fill="#222526">26,8</text>
-          <text class="al" x="150" y="196">PONTOS DE QUALIDADE PERDIDOS POR MILHÃO DE PARÂMETROS REMOVIDOS</text>
+          <text class="pl" x="140" y="60"  text-anchor="end">Component A</text>
+          <text class="pl" x="140" y="130" text-anchor="end">Component B</text>
+          <text class="tk" x="220" y="60"  >3.0</text>
+          <text class="tk" x="676" y="130" text-anchor="end" fill="#222526">26.8</text>
+          <text class="al" x="150" y="196">QUALITY POINTS LOST PER MILLION PARAMETERS REMOVED</text>
         </svg>
       </div>
 
       <div class="fig">
-        <h3>A fronteira entre comprimir e perder qualidade</h3>
+        <h3>The frontier between compressing and losing quality</h3>
         <p class="cap">
-          Quatro configurações medidas, três sementes cada. Comprimir mais custa
-          mais, mas não de forma uniforme: entre os dois primeiros pontos a
-          compressão sobe um terço e o custo praticamente não se move. O último
-          ponto ultrapassa o critério e foi descartado.
+          Four configurations measured, three seeds each. Compressing more
+          costs more, but not uniformly: between the first two points
+          compression rises by a third and the cost barely moves. The last
+          point exceeds the criterion and was discarded.
         </p>
-        <svg viewBox="0 0 720 300" role="img" aria-label="Custo de qualidade contra fator de compressão: 1,5x custa 1,7%; 2,0x custa 1,7%; 3,0x custa 3,4%; 6,0x custa 8,1% e reprova">
+        <svg viewBox="0 0 720 300" role="img" aria-label="Quality cost versus compression factor: 1.5x costs 1.7%; 2.0x costs 1.7%; 3.0x costs 3.4%; 6.0x costs 8.1% and fails">
           <line class="gl" x1="90" y1="232" x2="700" y2="232"/>
           <line class="gl" x1="90" y1="176" x2="700" y2="176"/>
           <line class="gl" x1="90" y1="120" x2="700" y2="120"/>
           <line class="gl" x1="90" y1="64"  x2="700" y2="64"/>
           <line class="cut" x1="90" y1="148" x2="700" y2="148"/>
-          <text class="cutl" x="700" y="142" text-anchor="end">critério: 5%</text>
+          <text class="cutl" x="700" y="142" text-anchor="end">criterion: 5%</text>
           <line class="axl" x1="90" y1="20" x2="90" y2="248"/>
           <line class="ax"  x1="90" y1="248" x2="700" y2="248"/>
           <text class="tk" x="80" y="252" text-anchor="end">0</text>
@@ -493,25 +418,25 @@
           <circle class="dot" cx="200" cy="199" r="5"/>
           <circle class="dot" cx="311" cy="153" r="5"/>
           <circle class="dot-o" cx="645" cy="20" r="5"/>
-          <text class="pl" x="146" y="222" text-anchor="middle">1,5×</text>
-          <text class="pl" x="200" y="222" text-anchor="middle">2,0×</text>
-          <text class="pl" x="311" y="222" text-anchor="middle">3,0×</text>
-          <text class="pl" x="645" y="222" text-anchor="middle">6,0×</text>
-          <text class="cutl" x="645" y="14" text-anchor="middle">reprova</text>
-          <text class="al" x="90" y="278">FATOR DE COMPRESSÃO →</text>
-          <text class="al" x="16" y="150" transform="rotate(-90 16 150)" text-anchor="middle">CUSTO %</text>
+          <text class="pl" x="146" y="222" text-anchor="middle">1.5×</text>
+          <text class="pl" x="200" y="222" text-anchor="middle">2.0×</text>
+          <text class="pl" x="311" y="222" text-anchor="middle">3.0×</text>
+          <text class="pl" x="645" y="222" text-anchor="middle">6.0×</text>
+          <text class="cutl" x="645" y="14" text-anchor="middle">fails</text>
+          <text class="al" x="90" y="278">COMPRESSION FACTOR →</text>
+          <text class="al" x="16" y="150" transform="rotate(-90 16 150)" text-anchor="middle">COST %</text>
         </svg>
       </div>
 
       <div class="fig">
-        <h3>O custo não some com a escala — ele trava</h3>
+        <h3>The cost doesn't vanish with scale — it plateaus</h3>
         <p class="cap">
-          A mesma configuração medida em três tamanhos de modelo. O custo cai e
-          depois estaciona. A linha tracejada é o valor que havia sido registrado
-          como previsão antes do terceiro experimento; ele não se confirmou, e a
-          previsão está registrada como falha.
+          The same configuration measured at three model sizes. The cost drops
+          and then stalls. The dashed line is the value that had been recorded
+          as a prediction before the third experiment; it did not hold, and the
+          prediction is recorded as a failure.
         </p>
-        <svg viewBox="0 0 720 280" role="img" aria-label="Custo de qualidade por escala de modelo: cai de 3,34 para 2,15 e estaciona em 2,14, contra uma previsão de 0,96 que não se confirmou">
+        <svg viewBox="0 0 720 280" role="img" aria-label="Quality cost by model scale: drops from 3.34 to 2.15 and stalls at 2.14, against a prediction of 0.96 that did not hold">
           <line class="gl" x1="100" y1="196" x2="660" y2="196"/>
           <line class="gl" x1="100" y1="140" x2="660" y2="140"/>
           <line class="gl" x1="100" y1="84"  x2="660" y2="84"/>
@@ -527,295 +452,297 @@
           <circle class="dot" cx="380" cy="108" r="5"/>
           <circle class="dot" cx="620" cy="109" r="5"/>
           <circle class="dot-o" cx="620" cy="174" r="5"/>
-          <text class="tk" x="170" y="30"  text-anchor="middle">3,34</text>
-          <text class="tk" x="380" y="98"  text-anchor="middle">2,15</text>
-          <text class="tk" x="620" y="99"  text-anchor="middle">2,14</text>
-          <text class="cutl" x="620" y="192" text-anchor="middle">0,96 previsto</text>
-          <text class="pl" x="170" y="250" text-anchor="middle">pequeno</text>
-          <text class="pl" x="380" y="250" text-anchor="middle">médio</text>
-          <text class="pl" x="620" y="250" text-anchor="middle">grande</text>
-          <text class="al" x="100" y="272">ESCALA DO MODELO →</text>
-          <text class="al" x="22" y="130" transform="rotate(-90 22 130)" text-anchor="middle">CUSTO %</text>
+          <text class="tk" x="170" y="30"  text-anchor="middle">3.34</text>
+          <text class="tk" x="380" y="98"  text-anchor="middle">2.15</text>
+          <text class="tk" x="620" y="99"  text-anchor="middle">2.14</text>
+          <text class="cutl" x="620" y="192" text-anchor="middle">0.96 predicted</text>
+          <text class="pl" x="170" y="250" text-anchor="middle">small</text>
+          <text class="pl" x="380" y="250" text-anchor="middle">medium</text>
+          <text class="pl" x="620" y="250" text-anchor="middle">large</text>
+          <text class="al" x="100" y="272">MODEL SCALE →</text>
+          <text class="al" x="22" y="130" transform="rotate(-90 22 130)" text-anchor="middle">COST %</text>
         </svg>
         <div class="legend">
-          <span><i></i>medido, três sementes por ponto</span>
-          <span class="d"><i></i>previsto antes do experimento — não se confirmou</span>
+          <span><i></i>measured, three seeds per point</span>
+          <span class="d"><i></i>predicted before the experiment — did not hold</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <section id="escala">
-    <h2>O QUE ISSO DARIA EM ESCALA</h2>
+  <section id="scale">
+    <h2>WHAT THIS WOULD MEAN AT SCALE</h2>
     <div class="proj">
-      <span class="proj-tag">PROJEÇÃO — ARITMÉTICA, NÃO MEDIÇÃO</span>
+      <span class="proj-tag">PROJECTION — ARITHMETIC, NOT MEASUREMENT</span>
       <div class="proj-grid">
         <div>
-          <span class="v num">~3 bi</span>
-          <span class="k">parâmetros guardados, no lugar de um modelo de 8 bilhões</span>
+          <span class="v num">~3 B</span>
+          <span class="k">parameters stored, in place of an 8-billion model</span>
         </div>
         <div>
-          <span class="v num">~1,5 GB</span>
-          <span class="k">de memória, com pesos em quatro bits</span>
+          <span class="v num">~1.5 GB</span>
+          <span class="k">of memory, with four-bit weights</span>
         </div>
         <div>
-          <span class="v num">~5 bi</span>
-          <span class="k">equivalentes dentro de um orçamento de 1 GB</span>
+          <span class="v num">~5 B</span>
+          <span class="k">equivalent parameters within a 1 GB budget</span>
         </div>
       </div>
       <p>
-        Estes três números não vêm de nenhum modelo treinado. São a proporção
-        medida nas escalas pequenas aplicada a tamanhos que esta pesquisa não
-        alcançou — o maior modelo verificado até aqui tem menos de duzentos
-        milhões de parâmetros.
+        These three numbers do not come from any trained model. They are the
+        ratio measured at small scales applied to sizes this research has not
+        reached — the largest model verified so far has fewer than two hundred
+        million parameters.
       </p>
       <p>
-        A proporção pode não se manter. Já aconteceu antes neste projeto: uma
-        tendência aparentemente estável em duas escalas parou de valer na
-        terceira, e a previsão registrada antes do experimento falhou. Por isso
-        a projeção aparece separada dos resultados, e sem a cor usada para o que
-        foi medido.
+        The ratio may not hold. It has happened before in this project: a trend
+        that looked stable across two scales stopped holding at the third, and
+        the prediction recorded before the experiment failed. That is why the
+        projection appears separately from the results, and without the color
+        used for what was measured.
       </p>
     </div>
   </section>
 
-  <section id="metodo">
-    <h2>COMO FOI TESTADO</h2>
+  <section id="method">
+    <h2>HOW IT WAS TESTED</h2>
     <ol class="method">
       <li>
-        <b>Previsão registrada antes do experimento.</b> Cada teste de escala
-        teve o resultado esperado e os desfechos possíveis escritos em log antes
-        de qualquer peso ser inicializado. Duas previsões falharam e estão
-        registradas como falha, com o valor previsto ao lado do medido.
+        <b>Prediction recorded before the experiment.</b> Every scaling test had
+        its expected result and possible outcomes written to a log before any
+        weight was initialized. Two predictions failed and are recorded as
+        failures, with the predicted value next to the measured one.
       </li>
       <li>
-        <b>Parâmetros pareados.</b> Toda comparação é contra uma linha de base do
-        mesmo tamanho, treinada na mesma receita, na mesma máquina. Compressão é
-        sempre medida sobre o corpo do modelo, com a tabela de vocabulário
-        excluída — foi justamente ela que mascarou o erro anterior.
+        <b>Matched parameters.</b> Every comparison is against a baseline of the
+        same size, trained on the same recipe, on the same machine. Compression
+        is always measured on the body of the model, with the vocabulary table
+        excluded — it was exactly that table that masked the earlier error.
       </li>
       <li>
-        <b>Três sementes por ponto.</b> Nenhum número publicado vem de uma
-        execução só. Quando um resultado depende de cruzar um limiar, o critério
-        é a pior semente, não a média.
+        <b>Three seeds per point.</b> No published number comes from a single
+        run. When a result depends on crossing a threshold, the criterion is
+        the worst seed, not the average.
       </li>
       <li>
-        <b>Auditoria antes de rodar.</b> Cada script é revisado antes da
-        execução. Quatro erros de implementação foram encontrados dessa forma, e
-        três deles teriam produzido um resultado falso positivo — fariam
-        acreditar em algo bom que não existia.
+        <b>Audit before running.</b> Every script is reviewed before execution.
+        Four implementation errors were caught this way, and three of them
+        would have produced a false positive — they would have made us believe
+        in something good that did not exist.
       </li>
       <li>
-        <b>Vereditos automáticos exigem significância.</b> Depois de um script
-        interpretar ruído como tendência, todo veredito passou a calcular o erro
-        padrão e comparar com a dispersão entre sementes antes de concluir
-        qualquer coisa.
+        <b>Automatic verdicts require significance.</b> After a script read
+        noise as a trend, every verdict started computing the standard error
+        and comparing it with the spread across seeds before concluding
+        anything.
       </li>
       <li>
-        <b>Reprodutível bit a bit.</b> Sementes fixas, checkpoint por época com
-        escrita atômica, e todos os números publicados conferidos contra os
-        arquivos em disco.
+        <b>Bit-for-bit reproducible.</b> Fixed seeds, per-epoch checkpoints
+        with atomic writes, and every published number checked against the
+        files on disk.
       </li>
     </ol>
   </section>
 
-  <section id="retratado">
-    <h2>O QUE FOI RETRATADO</h2>
+  <section id="retracted">
+    <h2>WHAT WAS RETRACTED</h2>
     <div class="entry struck">
-      <h3><span>Compressão de 28×</span></h3>
+      <h3><span>28× compression</span></h3>
       <p>
-        O número vinha de multiplicar dois fatores que não se multiplicam. Um
-        teste com parâmetros pareados derrubou a alegação inteira.
+        The number came from multiplying two factors that do not multiply. A
+        matched-parameter test brought down the entire claim.
       </p>
     </div>
     <div class="entry struck">
-      <h3><span>Sessenta e dois experimentos comprovando compressão</span></h3>
+      <h3><span>Sixty-two experiments proving compression</span></h3>
       <p>
-        Nenhum deles comprimia. A contabilidade incluía a tabela de vocabulário,
-        que mascarava o corpo do modelo estar maior que a linha de base. Nove de
-        nove escalas verificadas estavam infladas entre 0,3% e 41%.
+        None of them compressed. The accounting included the vocabulary table,
+        which masked the fact that the body of the model was larger than the
+        baseline. Nine out of nine verified scales were inflated by between
+        0.3% and 41%.
       </p>
     </div>
     <div class="entry struck">
-      <h3><span>O custo do compartilhamento some conforme o modelo cresce</span></h3>
+      <h3><span>The cost of sharing vanishes as the model grows</span></h3>
       <p>
-        Ele diminui e depois trava num piso positivo. A leitura anterior vinha de
-        dois pontos de medição; o terceiro ponto, registrado como previsão antes
-        do experimento, mostrou a saturação — e a previsão falhou.
+        It shrinks and then locks at a positive floor. The earlier reading came
+        from two measurement points; the third point, recorded as a prediction
+        before the experiment, showed the saturation — and the prediction
+        failed.
       </p>
     </div>
     <div class="entry struck">
-      <h3><span>Uma lei geral prevendo a compressão a partir da arquitetura</span></h3>
+      <h3><span>A general law predicting compression from architecture</span></h3>
       <p>
-        Oitocentas e quarenta e quatro fórmulas testadas sobre quarenta e dois
-        pontos. A melhor explicava 13% da variância. A análise de teto de ruído
-        mostra por quê: nessa escala a aleatoriedade do treino domina o efeito
-        arquitetural, e configurações idênticas produziam resultados de sinal
-        oposto.
+        Eight hundred and forty-four formulas tested on forty-two points. The
+        best one explained 13% of the variance. The noise-ceiling analysis
+        shows why: at this scale, training randomness dominates the
+        architectural effect, and identical configurations produced results of
+        opposite sign.
       </p>
     </div>
   </section>
 
-  <section id="nao-funcionou">
-    <h2>O QUE NÃO FUNCIONOU</h2>
+  <section id="did-not-work">
+    <h2>WHAT DIDN'T WORK</h2>
     <div class="fails">
       <div class="fail">
-        <h3>Remover os pesos menores</h3>
+        <h3>Removing the smallest weights</h3>
         <p>
-          Cortar metade dos pesos de menor magnitude degradou a qualidade em mais
-          de 50%. A hipótese de que o modelo estava subtreinado nunca foi
-          confirmada, então a técnica está fora do conjunto.
+          Cutting half of the lowest-magnitude weights degraded quality by more
+          than 50%. The hypothesis that the model was undertrained was never
+          confirmed, so the technique is out of the set.
         </p>
       </div>
       <div class="fail">
-        <h3>Fatorar as matrizes em posto menor</h3>
+        <h3>Factoring matrices into lower rank</h3>
         <p>
-          Funciona isolada e some quando combinada com o resto. Foi medida em
-          quatro escalas e não melhorou o resultado em nenhuma.
+          It works in isolation and vanishes when combined with the rest. It was
+          measured at four scales and did not improve the result at any of them.
         </p>
       </div>
       <div class="fail">
-        <h3>Fundir pesos por média</h3>
+        <h3>Merging weights by averaging</h3>
         <p>
-          Combinar blocos treinados separadamente tirando a média dos pesos
-          falhou completamente em modelos já treinados.
+          Combining separately trained blocks by averaging their weights failed
+          completely on already-trained models.
         </p>
       </div>
       <div class="fail">
-        <h3>Escalar dois eixos ao mesmo tempo</h3>
+        <h3>Scaling two axes at the same time</h3>
         <p>
-          A regra usada nos experimentos antigos crescia dois componentes juntos
-          e destruía a compressão por construção. Foi a causa raiz do erro nos
-          sessenta e dois experimentos.
+          The rule used in the old experiments grew two components together and
+          destroyed compression by construction. It was the root cause of the
+          error in the sixty-two experiments.
         </p>
       </div>
       <div class="fail">
-        <h3>Medir capacidade nesta escala</h3>
+        <h3>Measuring capability at this scale</h3>
         <p>
-          O teste de tarefa foi executado e deu resultado nulo: todos os modelos
-          ficaram no acaso. Não é problema de amostra — é o modelo ser pequeno
-          demais para a métrica funcionar.
+          The task benchmark was run and came back null: every model stayed at
+          chance. It isn't a sample-size problem — the model is too small for
+          the metric to work.
         </p>
       </div>
       <div class="fail">
-        <h3>Empurrar o compartilhamento ao extremo</h3>
+        <h3>Pushing sharing to the extreme</h3>
         <p>
-          Com parâmetros pareados, levar esse eixo ao limite piorou a qualidade
-          de forma monotônica. O ganho aparente era parâmetro comprado, não
-          compressão.
+          With matched parameters, taking that axis to the limit worsened
+          quality monotonically. The apparent gain was bought parameters, not
+          compression.
         </p>
       </div>
     </div>
   </section>
 
-  <section id="historia">
-    <h2>COMO O PROJETO CHEGOU AQUI</h2>
+  <section id="history">
+    <h2>HOW THE PROJECT GOT HERE</h2>
     <ul class="arc">
       <li>
-        <span class="stage">Início</span>
+        <span class="stage">Start</span>
         <div>
-          <h3>Um pedido de chatbot</h3>
+          <h3>A request for a chatbot</h3>
           <p>
-            O projeto começou como uma tentativa de construir um assistente. O
-            primeiro modelo tinha oitenta e um mil parâmetros e gerava texto
-            incoerente.
+            The project started as an attempt to build an assistant. The first
+            model had eighty-one thousand parameters and generated incoherent
+            text.
           </p>
         </div>
       </li>
       <li>
-        <span class="stage">Depois</span>
+        <span class="stage">Then</span>
         <div>
-          <h3>Redes treinadas do zero</h3>
+          <h3>Networks trained from scratch</h3>
           <p>
-            Modelos maiores, treinados em memória limitada, chegaram a gerar
-            texto coerente em três idiomas. A partir daí a pergunta deixou de ser
-            como fazer funcionar e passou a ser quanto disso é necessário.
+            Larger models, trained in limited memory, managed to generate
+            coherent text in three languages. From there the question stopped
+            being how to make it work and became how much of it is necessary.
           </p>
         </div>
       </li>
       <li>
-        <span class="stage">Virada</span>
+        <span class="stage">Turn</span>
         <div>
-          <h3>Quinze tentativas, zero vitórias</h3>
+          <h3>Fifteen attempts, zero wins</h3>
           <p>
-            Nos primeiros experimentos com dados reais o modelo comprimido perdia
-            por cerca de 10%, sem exceção. O diagnóstico apontou dois erros — um
-            de treino e um de arquitetura — e corrigi-los inverteu o resultado.
+            In the first experiments on real data the compressed model lost by
+            about 10%, without exception. The diagnosis pointed to two errors —
+            one in training and one in architecture — and fixing them reversed
+            the result.
           </p>
         </div>
       </li>
       <li>
-        <span class="stage">Auditoria</span>
+        <span class="stage">Audit</span>
         <div>
-          <h3>A inversão era falsa</h3>
+          <h3>The reversal was false</h3>
           <p>
-            Uma verificação de contabilidade meses depois mostrou que a
-            comparação estava errada desde o começo. Todo o corpo de resultados
-            foi refeito com parâmetros pareados, e a maior parte dele não
-            sobreviveu.
+            An accounting check months later showed that the comparison had been
+            wrong from the start. The entire body of results was redone with
+            matched parameters, and most of it did not survive.
           </p>
         </div>
       </li>
       <li>
-        <span class="stage">Agora</span>
+        <span class="stage">Now</span>
         <div>
-          <h3>Um resultado menor e verdadeiro</h3>
+          <h3>A smaller, true result</h3>
           <p>
-            O que sobrou é uma fração do que se acreditava ter, medido em quatro
-            escalas com três sementes por ponto, e é a primeira coisa do projeto
-            que sobreviveria a uma revisão independente.
+            What remains is a fraction of what was believed, measured at four
+            scales with three seeds per point, and it is the first thing in the
+            project that would survive an independent review.
           </p>
         </div>
       </li>
     </ul>
   </section>
 
-  <section id="limites">
-    <h2>LIMITES DO QUE ISSO MOSTRA</h2>
+  <section id="limits">
+    <h2>LIMITS OF WHAT THIS SHOWS</h2>
     <div class="scope">
       <ul>
         <li>
-          A qualidade é medida por perplexidade em texto, não por desempenho em
-          tarefas. O teste de tarefa foi executado e deu nulo, com a estatística
-          registrada.
+          Quality is measured by perplexity on text, not by task performance.
+          The task benchmark was run and came back null, with the statistics
+          recorded.
         </li>
         <li>
-          O maior modelo treinado até aqui é pequeno para os padrões da área.
-          Nada aqui foi verificado em escala industrial, e a extrapolação para
-          modelos grandes é aritmética, não evidência.
+          The largest model trained so far is small by the field's standards.
+          Nothing here has been verified at industrial scale, and the
+          extrapolation to large models is arithmetic, not evidence.
         </li>
         <li>
-          Um único par de corpora, em inglês, com contexto curto. Generalização
-          para código, outros idiomas ou seguimento de instruções não foi
-          testada.
+          A single pair of corpora, in English, with short context.
+          Generalization to code, other languages or instruction following has
+          not been tested.
         </li>
         <li>
-          Os números valem para um orçamento de treino fixo. Há indício medido de
-          que treino mais longo melhora o resultado, e a extensão disso é
-          desconhecida.
+          The numbers hold for a fixed training budget. There is measured
+          evidence that longer training improves the result, and the extent of
+          that is unknown.
         </li>
         <li>
-          Uma única GPU, um único tipo de precisão, geração de um token por vez.
-          Outros regimes de execução não foram medidos.
+          A single GPU, a single precision type, one-token-at-a-time
+          generation. Other execution regimes were not measured.
         </li>
       </ul>
     </div>
   </section>
 
-  <section id="situacao">
-    <h2>SITUAÇÃO</h2>
+  <section id="status">
+    <h2>STATUS</h2>
     <div class="measure">
       <p>
-        A pesquisa continua. As próximas etapas são validar o resultado em uma
-        escala maior do que a placa doméstica alcança, fechar a lacuna do teste
-        de tarefa — que exige um modelo grande o bastante para sair do acaso — e
-        rodar o modelo comprimido em um telefone comum.
+        The research continues. The next steps are to validate the result at a
+        scale larger than a home graphics card can reach, close the task-test
+        gap — which requires a model large enough to rise above chance — and
+        run the compressed model on an ordinary phone.
       </p>
       <p>
-        O método completo, as configurações e os dados brutos não estão
-        publicados. Contato aberto para colaboração, revisão independente ou
-        acesso sob acordo.
+        The full method, configurations and raw data are not published. Open to
+        contact for collaboration, independent review or access under
+        agreement.
       </p>
     </div>
   </section>
@@ -825,10 +752,10 @@
 <footer>
   <div class="wrap">
     <p>
-      FOSHI · pesquisa independente conduzida por um pesquisador autodidata no
-      Rio Grande do Sul, Brasil. Todos os experimentos rodaram em uma única GPU
-      de consumo. Os números desta página são medidos; onde há estimativa, ela
-      está identificada como tal.
+      FOSHI · independent research conducted by a self-taught researcher in
+      Rio Grande do Sul, Brazil. All experiments ran on a single consumer GPU.
+      The numbers on this page are measured; where there is an estimate, it is
+      labeled as such.
     </p>
   </div>
 </footer>

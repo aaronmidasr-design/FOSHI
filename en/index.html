@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -47,7 +47,6 @@
   .brand{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
   .mark{font-family:"IBM Plex Sans";font-weight:600;letter-spacing:.14em;font-size:15px}
   .bar .meta{font-size:13.5px;color:var(--muted);font-family:"IBM Plex Sans"}
-  @media (max-width:620px){.bar .meta{display:none}}
 
   .burger{appearance:none;background:transparent;border:1px solid var(--rule);
     border-radius:2px;width:44px;height:38px;cursor:pointer;flex:0 0 auto;
@@ -202,7 +201,6 @@
   .proj-grid .k{font-family:"IBM Plex Sans";font-size:13.5px;color:var(--muted);
     margin-top:9px;display:block;line-height:1.45;max-width:22ch}
   .proj p{font-size:15.5px;color:var(--ink-soft);max-width:60ch}
-  @media (max-width:760px){.proj-grid{grid-template-columns:1fr;gap:20px}}
 
   .scope{background:var(--card);border:1px solid var(--rule);padding:30px 32px}
   .scope ul{margin:0;padding-left:20px}
@@ -219,103 +217,29 @@
   @keyframes rise{to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.rise{animation:none;opacity:1;transform:none}}
 
-  @media (max-width:860px){
-    .scope-band{grid-template-columns:repeat(2,1fr);gap:24px 20px}
-    .fails{grid-template-columns:1fr;gap:0}
-  }
-  @media (max-width:760px){
-    body{font-size:16px}
-    .hero{padding:52px 0 44px}
-    .readout{grid-template-columns:1fr;border-top:0}
-    .cell{border-right:0;border-bottom:1px solid var(--rule);padding:20px 0}
-    .cell:last-child{border-bottom:0}
-    .cols{grid-template-columns:1fr;gap:34px}
-    .arc li{grid-template-columns:1fr;gap:6px}
-    section{padding:46px 0}
-  }
-
-  /* ---------- contraste mobile ---------- */
-  @media (max-width:760px){
-    .hero{padding:44px 0 42px;background-image:
-      linear-gradient(rgba(80,84,86,.38) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(80,84,86,.38) 1px,transparent 1px);
-      background-size:100% 30px,30px 100%;}
-    .hero::after{background:linear-gradient(180deg,rgba(105,109,111,.96) 0%,rgba(145,149,151,.96) 28%,rgba(185,188,190,.97) 52%,rgba(82,86,88,.96) 76%,rgba(34,37,38,1) 100%)}
-    .hero h1{color:#fff;text-shadow:0 2px 5px rgba(0,0,0,.45);font-size:clamp(32px,9vw,44px);line-height:1.08}
-    .hero .lede{color:#F5F2ED;text-shadow:0 1px 3px rgba(0,0,0,.40);font-size:17px;line-height:1.65}
-    .cell .v{color:#B0761A;text-shadow:0 1px 2px rgba(0,0,0,.25)}
-    .cell .k{color:#FFFFFF;font-size:15.5px;font-weight:500;line-height:1.5;text-shadow:0 2px 5px rgba(0,0,0,.45)}
-    .readout-note{color:#E9E6E1;font-size:14px;line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.35)}
-    .wrap{padding-left:22px;padding-right:22px}
-  }
   /* ---------- letras mais legiveis em qualquer tela ---------- */
   .hero .lede{
     color:#FFFFFF;
     font-weight:500;
     text-shadow:0 2px 5px rgba(0,0,0,.45)
   }
+
+  /* ---------- celular: mesmo visual do PC ----------
+     Cores, fundo, tamanhos e cabeçalho são os mesmos do computador.
+     Aqui só se reorganiza o que fisicamente não cabe na largura do telefone. */
   @media (max-width:760px){
-    .hero .lede{
-      font-size:18px;
-      line-height:1.65;
-      color:#FFFFFF;
-      font-weight:600;
-      max-width:100%;
-      text-shadow:0 2px 5px rgba(0,0,0,.60)
-    }
-    .cell .k{
-      color:#FFFFFF;
-      font-size:15.5px;
-      font-weight:600;
-      line-height:1.5;
-      text-shadow:0 2px 5px rgba(0,0,0,.60)
-    }
-  }
-
-
-  /* ---------- versão mobile aprimorada ---------- */
-  @media (max-width:760px){
-    html{scroll-behavior:smooth}
-    body{font-size:16px;overflow-x:hidden}
-    .wrap{width:min(100% - 32px,var(--measure));padding-left:0;padding-right:0}
-    header{padding:14px 0}
-    .nav{gap:14px;align-items:center}
-    .brand{font-size:13px}
-    .menu{display:none}
-
-    .hero{padding:42px 0 38px;overflow:hidden}
-    .hero .wrap{width:min(100% - 32px,var(--measure))}
-    .hero h1{font-size:clamp(30px,9vw,42px);line-height:1.08;letter-spacing:-.02em;margin-bottom:16px}
-    .hero .lede{font-size:17px;line-height:1.58;max-width:100%;color:#fff;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.5)}
-
-    .readout{margin-top:38px;display:grid;grid-template-columns:1fr;border-top:0}
-    .cell{padding:20px 0 22px;border-right:0;border-bottom:1px solid var(--rule)}
-    .cell:last-child{border-bottom:0}
-    .cell .v{font-size:clamp(42px,13vw,56px);line-height:.98}
-    .cell .k{font-size:15.5px;line-height:1.5;max-width:32ch;color:#fff;font-weight:500;text-shadow:0 2px 5px rgba(0,0,0,.45)}
-    .readout-note{font-size:14px;line-height:1.6;margin-top:16px}
-
-    section{padding:42px 0}
-    section h2{font-size:clamp(22px,6vw,30px);line-height:1.15}
-    .cols,.proj-grid{grid-template-columns:1fr;gap:26px}
-    .cols>*{min-width:0}
-    p{line-height:1.65}
-    .arc li{grid-template-columns:1fr;gap:6px;padding:14px 0}
-    .arc .yr{font-size:13px}
-    .project-card{padding:20px}
-    .project-card h3{font-size:19px}
-    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-    table{min-width:620px}
-    pre,code{max-width:100%;overflow-x:auto}
-    footer{padding:30px 0 36px}
-  }
-
-  @media (max-width:380px){
-    .wrap,.hero .wrap{width:calc(100% - 28px)}
-    .hero{padding-top:36px}
-    .hero h1{font-size:30px}
-    .hero .lede{font-size:16px}
-    .cell .v{font-size:42px}
+    .wrap{padding:0 20px}
+    .brand{gap:2px 12px}
+    .readout{gap:0 12px}
+    .cell{padding:26px 0 24px;min-width:0}
+    .cell .k{max-width:none}
+    .scope-band{grid-template-columns:repeat(3,1fr);gap:24px 16px}
+    .cols{grid-template-columns:1fr;gap:18px}
+    .fails{grid-template-columns:1fr;gap:0}
+    .arc li{grid-template-columns:72px 1fr;gap:14px}
+    .proj{padding:24px 20px}
+    .proj-grid{grid-template-columns:1fr;gap:20px}
+    .scope{padding:24px 20px}
   }
 
   /* ---------- language switcher ---------- */
